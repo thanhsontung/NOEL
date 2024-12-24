@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERRY CHRISTMAS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="as" class="christmas-message" style="color: rgb(139, 241, 113);">Merry Christmas</div>
+    <div class="tree-container">
+        <img src="https://github.com/Panbap/datapanbap/blob/main/image/big_tree.png?raw=true" alt="Cây thông"
+            class="tree-icon">
+    </div>
+
+    <div class="container">
+        <button onclick="unmuteAudio()" id="showButton">
+            <img src="./image/hopqua.jpg" alt="" style="width: 200px; height: 200px;">
+        </button>
+    </div>
+
+    <div id="guideInfo" class="hidden">
+        <button id="closeButton" class="close-btn">X</button>
+        <div id="ax" class="card">
+            <div class="imgBox">
+                <div class="bark"></div>
+                <img src="https://github.com/Panbap/datapanbap/blob/main/image/mery.png?raw=true">
+            </div>
+            <div class="details" style="color: rgb(139, 241, 113);">
+                <h4 class="color2 margin" style="color: rgb(216, 224, 99); font-weight: 900;">(MERRY CHRISTMAS)</h4>
+                    <hp>Giáng Sinh đến rồi.</hp> <br>
+                    <hp>Chúc Hai một mùa lễ ấm áp </hp>
+                    <hp>lúc nào cũng rạng rỡ,</hp>
+                    <hp>Chúc Hai luôn luôn tươi trẻ</hp>
+                    <hp>và ngày càng xinh đẹp hơn nữa!</hp>
+                    <hp>Trong công việc chúc Chị luôn</hp>
+                    <hp>thuận lợi thăng tiến không ngừng.</hp>
+                   <br> <hp class="text-right">Chúc mừng Giáng Sinh!</hp><br>
+                <p class="text-right">-Tung-</p>
+            </div>
+        </div>
+    </div>
+    <div class="image_tuanloc" style="position: relative;">
+        <img id="tuanloc" src="./image/tuanloc.jpg" alt="" hidden>
+    </div>
+
+    <audio src="./audio/amthanhnoel.mp3" type="audio/mp3" autoplay loop id="audio"></audio>
+    <script src="script.js"></script>
+</body>
+<script>
+    function unmuteAudio() {
+        // Phát âm thanh
+        const audio = document.getElementById('audio');
+        audio.muted = false;
+        audio.play();
+
+        // Hiển thị hình tuần lộc
+        const tuanLoc = document.getElementById('tuanloc');
+        tuanLoc.hidden = false; // Hoặc tuanLoc.style.display = "block";
+        console.log("Âm thanh phát và tuần lộc xuất hiện!");
+    }
+</script>
+
+</html>
